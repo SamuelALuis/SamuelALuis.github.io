@@ -7,6 +7,14 @@
     background-color: rgba(0 0 255 / 0.2);
 }
 
+.h1 {
+    font-weight: 900;
+}
+
 .img1 {
     width: 300px;
+}
+
+li {
+    list-style-type: disc;
 }
