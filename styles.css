@@ -4,7 +4,8 @@
     margin: 0;
     text-align: center;
     letter-spacing: normal;
-    background-color: rgba(0 0 255 / 0.2);
+    background-color: rgba(0 0 255 / 0.2);   
+    
 }
 
 .h1 {
@@ -15,6 +16,12 @@
     width: 300px;
 }
 
-li {
-    list-style-type: disc;
+.container {
+    height: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
 }
+
+
