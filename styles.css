@@ -1,1 +1,12 @@
+/*Customizes the whole html page*/
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    letter-spacing: normal;
+    background-color: rgba(0 0 255 / 0.2);
+}
 
+.img1 {
+    width: 300px;
+}
