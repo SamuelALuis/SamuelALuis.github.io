@@ -20,9 +20,14 @@
     width: 300px;
 }
 
+.socials {
+    width: 30px;
+    list-style: none;
+    display: inline;
+}
 
 li {
-    list-style: circle;
+    list-style:disc;
     color: black;
     font-weight: 900;
 }
@@ -38,5 +43,5 @@ li {
 }
 
 .item {
-    width: 30em;
+    width: auto;
 }
