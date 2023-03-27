@@ -2,10 +2,12 @@
 * {
     padding: 0;
     margin: 0;
-    text-align: center;
     letter-spacing: normal;
-    background-color: rgba(0 0 255 / 0.2);   
-    
+    background-color:rgba(0 0 255 / .2);  
+}
+
+.center {
+    text-align: center;
 }
 
 .h1 {
@@ -16,12 +18,19 @@
     width: 300px;
 }
 
-.container {
-    height: 10px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    
+li {
+    list-style: circle;
 }
 
+.container {
+    height: auto;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.item {
+    width: 30em;
+}
