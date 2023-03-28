@@ -22,8 +22,11 @@
 
 .socials {
     width: 30px;
-    list-style: none;
     display: inline;
+}
+
+a:hover {
+    background: blue;
 }
 
 li {
