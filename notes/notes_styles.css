@@ -1,0 +1,18 @@
+* {
+    background-color:rgba(255 0 0 / .2);
+    text-align: center;
+}
+
+.page-wrapper {
+    display: inline-block;
+}
+
+.side-1 {
+    padding: 10px;
+    display: inline-grid;
+}
+
+.side-2 {
+    padding: 10px;
+    display: inline-grid;
+}

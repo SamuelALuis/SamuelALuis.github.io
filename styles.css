@@ -11,21 +11,35 @@
     text-align: center;
 }
 
-.h1 {
-    font-weight: 900;
-}
-
 .img1 {
     width: 300px;
+    border-radius: 20px;
+}
+
+.socials-container {
+    display: inline-flex;
+    padding: 0;
 }
 
 .socials {
     width: 30px;
-    display: inline;
 }
 
-a:hover {
-    background: blue;
+.view {
+    font-weight: 900;
+}
+
+a:link,
+a:visited {
+    color: yellowgreen;
+}
+    
+a:hover {    
+    background-color: blue;
+}
+
+.page-wrapper {
+    text-align: center;
 }
 
 li {
@@ -35,13 +49,10 @@ li {
 }
 
 .container {
-    
-    height: auto;
-    padding: 20px;
-    display: grid;
-    align-items: center;
-    justify-content: left;
+    padding: 10px;
+    display: inline-grid;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .item {
