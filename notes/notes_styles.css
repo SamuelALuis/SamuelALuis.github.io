@@ -8,11 +8,11 @@
 }
 
 .side-1 {
-    padding: 10px;
+    margin-right: 100px;
     display: inline-grid;
 }
 
 .side-2 {
-    padding: 10px;
+    margin-left: 100px;
     display: inline-grid;
 }
