@@ -1,38 +1,21 @@
-/*Customizes the whole html page*/
 * {
     letter-spacing: normal;
     background-color:rgba(0 0 255 / .2);
-    background: linear-gradient;
 }
 
-.header {
-    display: grid;
-    justify-content: center;
+body {
     text-align: center;
 }
 
-.img1 {
+img {
     width: 300px;
-    border-radius: 20px;
-}
-
-
-
-
-
-
-.socials-container {
-    text-align: center;
-    float: left;
+    border-radius: 15px;
 }
 
 .socials {
     width: 30px;
-    height: 30px;
-    margin: 5px;
-    padding: 2px;
     border-radius: 15px;
-    opacity: .6;
+    opacity: .7;
 }
 
 .socials:hover {
@@ -42,31 +25,13 @@
     background-color: blue;
 }
 
-.view {
-    font-weight: 900;
-}
-
 a:link,
 a:visited {
     color: yellowgreen;
 }
-    
 
-
-
-
-
-
-
-
-
-.page-wrapper {
-    text-align: center;
-}
-
-li {
+#mylist-el {
     list-style: none;
-    color: black;    
 }
 
 .container {
@@ -77,12 +42,4 @@ li {
     font-family: 'Poppins', sans-serif;
 }
 
-.section {
-    margin-bottom: 40px;
-}
 
-.item {
-    width: auto;
-    text-align: left;
-    display: grid;
-}

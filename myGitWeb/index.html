@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"> 
 <head>
-    <!--Allows other browsers to open the website-->
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <!--Its a refrenece to the language we're using(keyboard format)-->
     <meta charset="UTF-8">
-    <!--Scales the websites size to fit any device-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Tab title-->
     <title>
         New Website
     </title>
-    <!--Links html and css-->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <!--The information at the top of the website-->
-    <header class="header">
-        <div class="title">
+    <header>
+        <div>
             <h1>Samuel AL</h1>
-            <img class="img1" src="images/red-car-4.jpg">
-            <h2>Web Developer / Graphic Designer</h2>
+            <img src="/images/red-car-4.jpg">
+            <h2>Web Developer</h2>
         </div>
 
         <div class="socials-container">
-            <a href="#"><img class="socials" src="images/email-png.png"></a>
-            <a href="https://github.com/" target="_blank"><img class="socials" src="images/github-png.png"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img class="socials" src="images/insta-png.webp"></a>
+            <a href="#"><img class="socials" src="/images/email-png.png"></a>
+            <a href="https://github.com/" target="_blank"><img class="socials" src="/images/github-png.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img class="socials" src="/images/insta-png.webp"></a>
         </div>
             
+            <p><a href="notes/notes_index.html" class="view">view</a></p>
     </header>
-    
-    <!--Section/container-->
+
     <div class="page-wrapper">
         <div class="container">
             <section>
@@ -46,9 +39,7 @@
             </section>
             <section>
                 <h3 class="section"><i>Skills</i></h3>
-                    <ul class="item">
-                        <li>Graphic Design</li>
-                    </ul>
+                    <p id="mylist-el"></p>
             </section>
         </div>
         <div class="container">         
@@ -66,6 +57,6 @@
             </section>
         </div>
     </div>
-
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
