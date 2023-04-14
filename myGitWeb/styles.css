@@ -1,6 +1,6 @@
 * {
     letter-spacing: normal;
-    background-color:rgba(0 0 255 / .2);
+    background-color:rgb(92, 92, 94);
 }
 
 body {
@@ -47,7 +47,7 @@ body {
 }
 
 .barSection {
-    margin-inline: auto;
+    font-style: italic;
     background: black;
     color: white;
     border-radius: 10px;
@@ -59,12 +59,14 @@ body {
     border: solid;
     border-radius: 5px;
     font-weight: bold;
+    background: white;
 }
 
 .aboutMe {
     border: solid;
     border-radius: 5px;
     font-weight: bold;
+    background: white;
 }
 
 .container {
