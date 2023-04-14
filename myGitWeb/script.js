@@ -1,19 +1,19 @@
-let skillList = {
-    skills: ["HTML", "CSS", "JavaScript"]
+let workHisList = ["Freelance Graphic Designing", "Freelance Web Designing"]
+let skillList = ["HTML", "CSS", "JavaScript"]
+let goalsList = ["Learn efectivley the process of developing websites",
+"Creat websites that can be used by anyone across the world.",
+"Learn as many languages as I can"]
+
+let workHisEl = document.getElementById("workhis-el")
+let skillsEl = document.getElementById("skills-el")
+let goalsEl = document.getElementById("goals-el") 
+
+function displayList(a, b) {
+    for (let i = 0; i < b.length; i++) {
+       a.innerHTML += `<li class="liRows">${b[i]}</li>` 
+    }
 }
 
-let mylistEl = document.getElementById("mylist-el")
-
-mylistEl.innerHTML = `
-<li>${skillList.skills[0]}</li>
-<li>${skillList.skills[1]}</li>
-<li>${skillList.skills[2]}</li>
-`//skillList.skills1 + skillList.skills2 + skillList.skills3;
-
-
-
-/*`
-    <li>${skillList.skills1}</li>
-    <li>${skillList.skills2}</li>
-    <li>${skillList.skills3}</li>
-`*/
+displayList(workHisEl, workHisList)
+displayList(skillsEl, skillList)
+displayList(goalsEl, goalsList)
