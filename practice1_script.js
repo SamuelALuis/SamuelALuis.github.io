@@ -125,10 +125,8 @@ cashEnt.addEventListener("click", function() {
 select.addEventListener("click", function() {
     if (letInp.value === "A" && numInp.value < 5) {
         rItem.textContent = "\$2 " + items.A[numInp.value]
-            clearInputs()
     } else if (letInp.value === "B" && numInp.value < 5) {
         rItem.textContent = "\$3 " + items.B[numInp.value]
-            clearInputs()
     } 
 })
 
