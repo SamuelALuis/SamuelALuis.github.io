@@ -128,7 +128,7 @@ select.addEventListener("click", function() {
             clearInputs()
     } else if (letInp.value === "B" && numInp.value < 5) {
         rItem.textContent = "\$3 " + items.B[numInp.value]
-        clearInputs()
+            clearInputs()
     } 
 })
 
