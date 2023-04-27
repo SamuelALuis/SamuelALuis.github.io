@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="practice1.styles.css">    
+        
+    </head>
+    <body>
+        <h2 class="bar">Practice #1</h2> 
+        <h3>Two # multiplier</h3>   
+            <input id="num1">
+            <input id="num2">
+                <br>
+            <button id="output-btn">output</button>
+            <p id="answer">0</p>
+        <h2 class="bar">Practice #2</h2>
+        <h3>Weather Checker</h3>
+            <div id="box1">
+                <input id="temp-el">
+                    <br>
+                <button id="tempOutput-btn">Temp lvl</button>
+                <p id="tempLvl-el">0</p>
+            </div>
+        <h2 class="bar">Practice #3</h2>
+        <h3>Vending Machine</h3>
+            <div class="box2">
+                <section id="drinks-section">
+                </section>
+                <section id="chips-section">
+                </section>
+                    <br>
+                <div class="money">
+                    <input id="cash-in" maxlength="4" placeholder="$">
+                    <button id="cash-ent">Enter</button>
+                    <p id="total-cash" value="">Total: $</p>
+                </div>
+                <div>
+                    <input id="let-input" maxlength="1" placeholder="A-B" oninput="this.value = this.value.toUpperCase()">
+                    <input id="num-input" maxlength="1" placeholder="#" oninput="this.value = this.value.toUpperCase()">
+                    <button id="select">Select</button>
+                    <p id="r-item">Welcome :]</p>
+                    <button id="buy-btn">Buy</button>
+                </div>
+                    <br>
+                <div class="yorn">
+                    <button id="buymore-btn">Buy More</button>
+                    <button id="endsale-btn">End Purchase</button>
+                </div>
+                <p id="bag">Bag: </p>
+                <p id="change">Change: </p>
+            </div>
+            <!--For problem 3 create a vending machine, it should have a few buttons. 
+            The first button should list all the drinks with there prices (create a function), 
+            when the user inputs money (a value) it has to be positive, 
+            then the user will have to pick a drink. 
+            Note, there should be another button if the user wants to continue another purchase if so continue. 
+            Once the user is done, return the user left over change and update inventory-->
+        <script src="practice1.script.js">    </script>    
+    </body>
+</html>

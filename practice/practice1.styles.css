@@ -1,0 +1,97 @@
+.bar {
+    margin-inline: auto;
+    background: black;
+    color: white;
+}
+
+input {
+    width: 40px;
+    font-weight: bold;
+    font-size: large;
+    height: 20px;
+}
+
+button {
+    margin-top: 7px;
+}
+
+#box1 {
+    padding: 5px;
+    border: solid;
+    border-color: black;
+    width: 500px;
+}
+
+.box2 {
+    text-align: center;
+    width: 500px;
+    padding: 5px;
+    border: solid;
+    border-color: black;
+}
+
+#drinks-section {
+    display: inline-flex;
+}
+
+#chips-section {
+    display: inline-flex;
+}
+
+.item {
+    font-weight: bold;
+    border: solid;
+    width: 55px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid;
+    border-radius: 13px;
+    margin-inline: 3px;
+}
+
+
+.money {
+    display: flex;
+}
+
+#cash-in {
+    margin-top: 15px;
+}
+
+#cash-ent {
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 3px;
+}
+
+#total-cash {
+    margin-left: 105px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.yorn {
+    display: inline-grid;
+}
+
+#r-item {
+    text-align: center;
+    font-weight: bold;
+    font-size:larger;
+    color: blue;
+}
+
+#bag {
+    text-align: end;
+    margin-right: 70px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#change {
+    text-align: end;
+    margin-right: 70px;
+    font-weight: bold;
+    font-size: large;
+}

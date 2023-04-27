@@ -13,6 +13,34 @@ body {
     color: white;
 }
 
+.imgSeperator {
+    display: inline-flex;
+}
+
+#hrs {
+    margin-right: 50px;
+}
+
+#hr1 {
+    background: black;
+    width: 10px;
+    height: 100px;
+    rotate: 45deg;
+    margin-top: 35px;
+    border-right: black;
+    border-width: 3px;
+}
+
+#hr2 {
+    background: black;
+    width: 10px;
+    height: 100px;
+    rotate: -45deg;
+    margin-top: -48px;
+    border-right: black;
+    border-width: 3px;
+}
+
 #profile-img {
     width: 300px;
     border-radius: 20%;
