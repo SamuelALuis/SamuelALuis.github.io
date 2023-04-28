@@ -28,14 +28,23 @@
                 <section id="chips-section">
                 </section>
                     <br>
+                <label id="money-label">$: 1,5,10,20</label>    
                 <div class="money">
                     <input id="cash-in" maxlength="4" placeholder="$">
                     <button id="cash-ent">Enter</button>
                     <p id="total-cash" value="">Total: $</p>
                 </div>
+                <div id="table">
+                    <section class="section">
+                        <p>Letters: </p>
+                        <input id="let-input" maxlength="1" placeholder="A-B" oninput="this.value = this.value.toUpperCase()">
+                    </section>
+                    <section class="section">
+                        <p>Number: </p>
+                        <input id="num-input" maxlength="1" placeholder="#" oninput="this.value = this.value.toUpperCase()">
+                    </section>
+                </div>
                 <div>
-                    <input id="let-input" maxlength="1" placeholder="A-B" oninput="this.value = this.value.toUpperCase()">
-                    <input id="num-input" maxlength="1" placeholder="#" oninput="this.value = this.value.toUpperCase()">
                     <button id="select">Select</button>
                     <p id="r-item">Welcome :]</p>
                     <button id="buy-btn">Buy</button>

@@ -102,10 +102,9 @@ for (i = 0; i < items.B.length; i++) {
 
 totalCash.value = 0
 cashEnt.addEventListener("click", function() {
-    
-    if (hasMoney === true) {
+    if (hasMoney === true || cashIn.value > 20) {
         return error
-    } else if (cashIn.value === "" || 0) {
+    } else if (cashIn.value === "") {
         rItem.textContent = "Add Money"
     } else if (totalCash.value === 5) {
         hasMoney = true
@@ -113,12 +112,26 @@ cashEnt.addEventListener("click", function() {
         totalCash.value += 1
             totalCash.textContent = "Total\: \$" + totalCash.value
                 cashIn.value = ""  
-    } else if (cashIn.value === "5" || "10" || "20") {
-        totalCash.value = cashIn.value
+    } else if (cashIn.value === "5") {
+        totalCash.value = 5
             totalCash.textContent += totalCash.value
                 rItem.textContent = "Pick Item"
                     cashIn.value = ""
                         hasMoney = true
+    } else if (cashIn.value === "10") {
+        totalCash.value = 10
+            totalCash.textContent += totalCash.value
+                rItem.textContent = "Pick Item"
+                    cashIn.value = ""
+                        hasMoney = true
+    } else if (cashIn.value === "20") {
+        totalCash.value = 20
+            totalCash.textContent += totalCash.value
+                rItem.textContent = "Pick Item"
+                    cashIn.value = ""
+                        hasMoney = true
+    } else { 
+        return error
     }
 })
 
@@ -177,7 +190,7 @@ buymoreBTn.addEventListener("click", function() {
                     clearInputs()
     } else if (letInp.value === "B" && totalCash.value > 2 && continueBuy === false) {
         totalCash.value -= 3  
-            bag.textContent += items[letInp.value][numInp.value]
+            bag.textContent += " " + items[letInp.value][numInp.value]
                 totalCash.textContent = "Total\: \$" + totalCash.value
                     clearInputs()
     }
@@ -200,17 +213,15 @@ endsaleBtn.addEventListener("click", function() {
     }
 })
 
-function resetEl() {
-    hasMoney = false
-    continueBuy = true
-    addMoney = false
-    endPurchase = false
-    rItem.textContent += ""
-    totalCash.textContent += ""
-    bag.textContent += ""
-    change.textContent += ""
-}
-
 function reset() {
-    setTimeout(resetEl(), 3000);   
+    setTimeout(function resetEl() {
+        hasMoney = false
+        continueBuy = true
+        addMoney = false
+        endPurchase = false
+        rItem.textContent = "Welcome :]"
+        totalCash.textContent = "Total: \$"
+        bag.textContent = "Bag:"
+        change.textContent = "Change:"    
+    }, 3000);   
 }

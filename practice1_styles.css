@@ -50,6 +50,12 @@ button {
     margin-inline: 3px;
 }
 
+#money-label {
+    display: flex;
+    padding: none;
+    margin: none;
+    font: bold;
+}
 
 .money {
     display: flex;
@@ -69,6 +75,22 @@ button {
     margin-left: 105px;
     font-weight: bold;
     font-size: large;
+}
+
+#table {
+    display: inline-flex;
+}
+
+.section {
+    display: inline-grid;
+    padding-inline: 3px;
+    margin: none;
+    
+}
+
+.section p {
+    padding-bottom: none;
+    margin-bottom: 2px;
 }
 
 .yorn {
