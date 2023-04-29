@@ -1,7 +1,13 @@
+* {
+    text-align: center;
+    background: rgba( 0, 0, 255, 0.3);
+}
+
 .bar {
     margin-inline: auto;
     background: black;
     color: white;
+    width: 600px;
 }
 
 input {
@@ -15,19 +21,34 @@ button {
     margin-top: 7px;
 }
 
+/*Practice #1*/
+
+#practice1 {
+    border: solid;
+    padding: 20px;
+    margin-inline: 10px;
+    width: 100px;
+    display: inline-block;
+}
+
+/*Practice #2*/
+
 #box1 {
     padding: 5px;
     border: solid;
     border-color: black;
-    width: 500px;
+    width: 200px;
+    display: inline-block;
 }
 
-.box2 {
-    text-align: center;
+/*Practice #3*/
+
+#box2 {
     width: 500px;
     padding: 5px;
     border: solid;
-    border-color: black;
+    border-color: black; 
+    display: inline-block;
 }
 
 #drinks-section {
@@ -116,4 +137,135 @@ button {
     margin-right: 70px;
     font-weight: bold;
     font-size: large;
+}
+
+/*Practice #4*/
+
+#practice4 {
+    display: inline;
+}
+
+#p4-player-section {
+    display: flex;
+}
+
+#tikTakToe {
+}
+
+#mark-section {
+    display: inline-flex;
+}
+
+#weapon-text {
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#mark-x {
+    padding-inline: 10px;
+    font-size: x-large;
+    margin-top: 0px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#mark-o {
+    padding-inline: 10px;
+    font-size: x-large;
+    margin-top: 0px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#mark-x:hover {
+    color: green;
+}
+
+#mark-o:hover {
+    color: red;
+}
+
+#tik-board {
+    border: solid;
+    display: inline-grid; 
+    padding: 10px;
+    background: aqua;
+}
+
+#tik-board p:hover {
+    background: blue;
+    color: yellow;
+}
+
+#first-row {
+    display: inline-flex;
+    margin-bottom: -16px;
+}
+
+#second-row {
+    display: inline-flex;
+    margin-top: -16px;
+    margin-bottom: -16px;
+}
+
+#third-row {
+    display: inline-flex;
+    margin-top: -16px;
+}
+
+#a-square {
+    border-bottom: solid;
+    border-right: solid;
+    padding: 30px;
+}
+
+#b-square {
+    border-bottom: solid;
+    border-right: solid;
+    border-left: solid;
+    padding: 30px;
+}
+
+#c-square {
+    border-bottom: solid;
+    border-left: solid;
+    padding: 30px;
+}
+
+#d-square {
+    border-top: solid;
+    border-bottom: solid;
+    border-right: solid;
+    padding: 30px;
+}
+
+#e-square {
+    border: solid;
+    padding: 30px;
+}
+
+#f-square {
+    border-top: solid;
+    border-bottom: solid;
+    border-left: solid;
+    padding: 30px;
+}
+
+#g-square {
+    border-top: solid;
+    border-right: solid;
+    padding: 30px;
+}
+
+#h-square {
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    padding: 30px;
+}
+
+#i-square {
+    border-top: solid;
+    border-left: solid;
+    padding: 30px;
 }

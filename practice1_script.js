@@ -225,3 +225,19 @@ function reset() {
         change.textContent = "Change:"    
     }, 3000);   
 }
+
+//Practice #4
+
+const playBtn = document.getElementById("play-btn")
+const weaponText = document.getElementById("weapon-text")
+const markX = document.getElementById("mark-x")
+const MarkO = document.getElementById("mark-o")
+
+
+playBtn.addEventListener("click", function() {
+    weaponText.style.visibility = "visible"
+        markX.style.visibility = "visible"
+            MarkO.style.visibility = "visible"
+})
+
+

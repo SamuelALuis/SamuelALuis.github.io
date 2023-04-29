@@ -6,12 +6,14 @@
     </head>
     <body>
         <h2 class="bar">Practice #1</h2> 
-        <h3>Two # multiplier</h3>   
-            <input id="num1">
-            <input id="num2">
-                <br>
-            <button id="output-btn">output</button>
-            <p id="answer">0</p>
+        <h3>Two # multiplier</h3>
+            <div id="practice1">  
+                <input id="num1">
+                <input id="num2">
+                    <br>
+                <button id="output-btn">output</button>
+                <p id="answer">0</p>
+            </div>
         <h2 class="bar">Practice #2</h2>
         <h3>Weather Checker</h3>
             <div id="box1">
@@ -22,7 +24,7 @@
             </div>
         <h2 class="bar">Practice #3</h2>
         <h3>Vending Machine</h3>
-            <div class="box2">
+            <div id="box2">
                 <section id="drinks-section">
                 </section>
                 <section id="chips-section">
@@ -57,12 +59,44 @@
                 <p id="bag">Bag: </p>
                 <p id="change">Change: </p>
             </div>
-            <!--For problem 3 create a vending machine, it should have a few buttons. 
-            The first button should list all the drinks with there prices (create a function), 
-            when the user inputs money (a value) it has to be positive, 
-            then the user will have to pick a drink. 
-            Note, there should be another button if the user wants to continue another purchase if so continue. 
-            Once the user is done, return the user left over change and update inventory-->
+        <h2 class="bar">Practice #4</h2>
+        <h3>Tik-Tak-Toe</h3>
+            <div id="practice4">  
+                <div id="p4-player-section">
+                    <section>
+                        <p>Player1:</p>
+                        <p>Player2:</p>
+                    </section>
+                </div>
+                <div id="tikTakToe">
+                    <div>
+                        <button id="play-btn">PLAY!</button>
+                        <p id="weapon-text">Choose Your Weapon</p>
+                    </div>
+                    <div id="mark-section">
+                        <p id="mark-x">X</p>
+                        <p id="mark-o">O</p>
+                    </div>
+                        <br>
+                    <div id="tik-board">
+                        <section id="first-row">
+                            <p id="a-square"></p>
+                            <p id="b-square"></p>
+                            <p id="c-square"></p>
+                        </section>
+                        <section  id="second-row">
+                            <p id="d-square"></p>
+                            <p id="e-square"></p>
+                            <p id="f-square"></p>
+                        </section>
+                        <section id="third-row">
+                            <p id="g-square"></p>
+                            <p id="h-square"></p>
+                            <p id="i-square"></p>
+                        </section>
+                    </div>
+                </div>
+            </div>
         <script src="practice1_script.js">    </script>    
     </body>
 </html>
