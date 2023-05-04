@@ -123,6 +123,7 @@ button {
     font-weight: bold;
     font-size:larger;
     color: blue;
+    background: aqua;
 }
 
 #bag {
@@ -142,18 +143,15 @@ button {
 /*Practice #4*/
 
 #practice4 {
-    display: inline;
+    border: solid;
+    width: 600px;
+    display: inline-block;
+
 }
 
-#p4-player-section {
-    display: flex;
-}
-
-#tikTakToe {
-}
-
-#mark-section {
-    display: inline-flex;
+#play-btn {
+    padding: 10px;
+    background: blueviolet;
 }
 
 #weapon-text {
@@ -161,10 +159,14 @@ button {
     visibility: hidden;
 }
 
+#mark-section {
+    display: inline-flex;
+}
+
 #mark-x {
     padding-inline: 10px;
     font-size: x-large;
-    margin-top: 0px;
+    margin: 0px;
     font-weight: bold;
     visibility: hidden;
 }
@@ -172,7 +174,7 @@ button {
 #mark-o {
     padding-inline: 10px;
     font-size: x-large;
-    margin-top: 0px;
+    margin: 0px;
     font-weight: bold;
     visibility: hidden;
 }
@@ -185,6 +187,28 @@ button {
     color: red;
 }
 
+#player-section {
+    display: inline-flex;
+}
+
+#player-section p {
+    margin: 7px;
+    margin-right: 30px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#display-board {
+    border-left: solid;
+    border-right: solid;
+    border-width: 5px;
+    font-weight: bold;
+    font-size: large;
+    width: fit-content;
+    padding-inline: 3px;
+    display: inline-flex;
+}
+
 #tik-board {
     border: solid;
     display: inline-grid; 
@@ -192,80 +216,100 @@ button {
     background: aqua;
 }
 
-#tik-board p:hover {
+#tik-board td:hover {
     background: blue;
     color: yellow;
-}
-
-#first-row {
-    display: inline-flex;
-    margin-bottom: -16px;
-}
-
-#second-row {
-    display: inline-flex;
-    margin-top: -16px;
-    margin-bottom: -16px;
-}
-
-#third-row {
-    display: inline-flex;
-    margin-top: -16px;
 }
 
 #a-square {
     border-bottom: solid;
     border-right: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
+    
 }
 
 #b-square {
     border-bottom: solid;
     border-right: solid;
     border-left: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
+    
 }
 
 #c-square {
     border-bottom: solid;
     border-left: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #d-square {
     border-top: solid;
     border-bottom: solid;
     border-right: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #e-square {
     border: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #f-square {
     border-top: solid;
     border-bottom: solid;
     border-left: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #g-square {
     border-top: solid;
     border-right: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #h-square {
     border-top: solid;
     border-right: solid;
     border-left: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
 }
 
 #i-square {
     border-top: solid;
     border-left: solid;
-    padding: 30px;
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
+    font-size: 50px
+}
+
+#newTTTGame {
+    margin: 10px;
+    padding: 10px;
+    background: blueviolet;
+    visibility: hidden;
 }

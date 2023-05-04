@@ -61,40 +61,43 @@
             </div>
         <h2 class="bar">Practice #4</h2>
         <h3>Tik-Tak-Toe</h3>
-            <div id="practice4">  
-                <div id="p4-player-section">
-                    <section>
-                        <p>Player1:</p>
-                        <p>Player2:</p>
+            <div id="practice4">
+                <div>
+                    <button id="play-btn">PLAY!</button>
+                    <p id="weapon-text">Choose Your Weapon</p>
+                </div>
+                <div id="mark-section">
+                    <p id="mark-x">X</p>
+                    <p id="mark-o">O</p>
+                </div>    
+                <div>
+                    <section id="player-section">
+                        <p id="player-one">Player1: </p>
+                        <p id="player-two">Player2: </p>
                     </section>
                 </div>
-                <div id="tikTakToe">
-                    <div>
-                        <button id="play-btn">PLAY!</button>
-                        <p id="weapon-text">Choose Your Weapon</p>
-                    </div>
-                    <div id="mark-section">
-                        <p id="mark-x">X</p>
-                        <p id="mark-o">O</p>
-                    </div>
-                        <br>
-                    <div id="tik-board">
-                        <section id="first-row">
-                            <p id="a-square"></p>
-                            <p id="b-square"></p>
-                            <p id="c-square"></p>
-                        </section>
-                        <section  id="second-row">
-                            <p id="d-square"></p>
-                            <p id="e-square"></p>
-                            <p id="f-square"></p>
-                        </section>
-                        <section id="third-row">
-                            <p id="g-square"></p>
-                            <p id="h-square"></p>
-                            <p id="i-square"></p>
-                        </section>
-                    </div>
+                <div>
+                    <p id="display-board"></p>
+                </div>
+                <table id="tik-board">
+                    <tr id="first-row">
+                        <td id="a-square"></td>
+                        <td id="b-square"></td>
+                        <td id="c-square"></td>
+                    </tr>
+                    <tr id="second-row">
+                        <td id="d-square"></td>
+                        <td id="e-square"></td>
+                        <td id="f-square"></td>
+                    </tr>
+                    <tr id="third-row">
+                        <td id="g-square"></td>
+                        <td id="h-square"></td>
+                        <td id="i-square"></td>
+                    </tr>
+                </table>
+                <div>
+                    <button id="newTTTGame">New Game</button>
                 </div>
             </div>
         <script src="practice1_script.js">    </script>    

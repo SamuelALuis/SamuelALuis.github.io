@@ -1,4 +1,4 @@
-//Practice #1
+//Practice #1///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let num1 = document.getElementById("num1")// num 1 refers to the first input box, .value would be the input 
 let num2 = document.getElementById("num2")// num 2 refers to the second input box, .value would be the input 
 const outputBtn = document.getElementById("output-btn")// output refers back to the button in html
@@ -13,7 +13,7 @@ outputBtn.addEventListener("click", function() {// output is a function that whe
 })
 
 
-//Practice #2
+//Practice #2///////////////////////////////////////////////////////////////////////////////////////////////////////
 let colorCh = document.getElementById("box1") // element id that refers back to the div containg practice #2
 let tempEl = document.getElementById("temp-el")
 const tempOutputBtn = document.getElementById("tempOutput-btn")
@@ -58,7 +58,7 @@ tempOutputBtn.addEventListener("click", function() {
 })
 
 
-//Practice #3
+//Practice #3//////////////////////////////////////////////////////////////////////////////////////////////////////
 let items = {
     A: ["Coke", "Pepsi", "Cola", "Sprite", "Fanta"],
     B: ["Cheetos", "Doritos", "Lay\'s", "Takis", "Ruffles"]}
@@ -226,18 +226,438 @@ function reset() {
     }, 3000);   
 }
 
-//Practice #4
-
+//Practice #4///////////////////////////////////////////////////////////////////////////////////////////////
+let TTTBoard = document.getElementById("tik-board")
 const playBtn = document.getElementById("play-btn")
 const weaponText = document.getElementById("weapon-text")
 const markX = document.getElementById("mark-x")
-const MarkO = document.getElementById("mark-o")
+const markO = document.getElementById("mark-o")
+markX.value = "X"
+markO.value = "O"
+let playerOne = document.getElementById("player-one")
+let playerTwo = document.getElementById("player-two")
+let displayBrd =  document.getElementById("display-board")
+//row 1
+let squareA =  document.getElementById("a-square")
+let squareB =  document.getElementById("b-square")
+let squareC =  document.getElementById("c-square")
+//row 2
+let squareD =  document.getElementById("d-square")
+let squareE =  document.getElementById("e-square")
+let squareF =  document.getElementById("f-square")
+//row 3
+let squareG =  document.getElementById("g-square")
+let squareH =  document.getElementById("h-square")
+let squareI =  document.getElementById("i-square")
 
+let markSelect = false
+let yourTurn = true
+let gameStart = false
+
+let markedA =  false
+let markedB =  false
+let markedC =  false
+let markedD =  false
+let markedE =  false
+let markedF =  false
+let markedG =  false
+let markedH =  false
+let markedI =  false
+
+const newTTTGame = document.getElementById("newTTTGame")
 
 playBtn.addEventListener("click", function() {
-    weaponText.style.visibility = "visible"
-        markX.style.visibility = "visible"
-            MarkO.style.visibility = "visible"
+    if (markSelect === true) {
+        return error
+    } else if (markSelect === false) {
+        show()
+        playBtn.style.visibility = "hidden"
+    }
 })
 
+function show() {
+    weaponText.style.visibility = "visible"
+            markX.style.visibility = "visible"
+                markO.style.visibility = "visible"
+                    playerOne.style.visibility = "visible"
+                        playerTwo.style.visibility = "visible"
+}
 
+function hide() {
+    weaponText.style.visibility = "hidden"
+        markX.style.visibility = "hidden"
+            markO.style.visibility = "hidden"
+}
+
+markX.addEventListener("click", function() {
+    if (markSelect === true) {
+        return error
+    } else if (markSelect === false) {
+        playerOne.value = markX.value
+            playerOne.textContent += playerOne.value
+                playerTwo.value = markO.value
+                    playerTwo.textContent += playerTwo.value
+                        markSelect = true
+                            gameStart =  true
+                                displayBrd.textContent = "Player1 Go First"
+                                    hide()
+    }
+})
+
+markO.addEventListener("click", function() {
+    if (markSelect === true) {
+        return error
+    } else if (markSelect === false) {
+        playerOne.value = markO.value
+            playerOne.textContent += playerOne.value
+                playerTwo.value = markX.value
+                    playerTwo.textContent += playerTwo.value
+                        markSelect = true
+                            gameStart = true
+                                displayBrd.textContent = "Player1 goes First"
+                                    hide()
+                                    
+    }
+})
+
+//row 1
+squareA.addEventListener("click", function() {
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedA === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareA.textContent = playerOne.value
+        squareA.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedA = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+squareB.addEventListener("click", function() {
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedB === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareB.textContent = playerOne.value
+        squareB.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedB = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+squareC.addEventListener("click", function() { 
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedC === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareC.textContent = playerOne.value
+        squareC.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedC = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+//row 2
+squareD.addEventListener("click", function() { 
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedD === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareD.textContent = playerOne.value
+        squareD.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedD = true
+                    win()
+                        playerBot()
+                            
+    }   
+})
+
+squareE.addEventListener("click", function() {
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedE === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareE.textContent = playerOne.value
+        squareE.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedE = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+squareF.addEventListener("click", function() {
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedF === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareF.textContent = playerOne.value
+        squareF.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedF = true
+                    win()
+                        playerBot()
+                             
+    }
+})
+//row 3
+squareG.addEventListener("click", function() {   
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedG === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareG.textContent = playerOne.value
+        squareG.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedG = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+squareH.addEventListener("click", function() { 
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedH === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareH.textContent = playerOne.value
+        squareH.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedH = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+squareI.addEventListener("click", function() {
+    if (yourTurn === false || gameStart === false) {
+        return error
+    } else if (markedI === true) {
+        return error
+    } else if (gameStart === true && yourTurn === true) {
+        squareI.textContent = playerOne.value
+        squareI.value = playerOne.value
+            displayBrd.textContent = "Player2 Turn"
+                yourTurn = false
+                    markedI = true
+                    win()
+                        playerBot()
+                            
+    }
+})
+
+function randomSquare() {
+    let randomNum = Math.floor( Math.random() * 9) + 1
+    if (randomNum === 1 && markedA === true) {
+        randomSquare()
+    } else if (randomNum === 2 && markedB === true) {
+        randomSquare()
+    } else if (randomNum === 3 && markedC === true) {
+        randomSquare()
+    } else if (randomNum === 4 && markedD === true) {
+        randomSquare()
+    } else if (randomNum === 5 && markedE === true) {
+        randomSquare()
+    } else if (randomNum === 6 && markedF === true) {
+        randomSquare()
+    } else if (randomNum === 7 && markedG === true) {
+        randomSquare()
+    } else if (randomNum === 8 && markedH === true) {
+        randomSquare()
+    } else if (randomNum === 9 && markedI === true) {
+        randomSquare()
+    } else if (randomNum === 1 && markedA === false) {
+        squareA.textContent = playerTwo.value
+        squareA.value = playerTwo.value
+        markedA = true
+        win()
+    } else if (randomNum === 2 && markedB === false) {
+        squareB.textContent = playerTwo.value
+        squareB.value = playerTwo.value
+        markedB = true
+        win()
+    } else if (randomNum === 3 && markedC === false) {
+        squareC.textContent = playerTwo.value
+        squareC.value = playerTwo.value
+        markedC = true
+        win()
+    } else if (randomNum === 4 && markedD === false) {
+        squareD.textContent = playerTwo.value
+        squareD.value = playerTwo.value
+        markedD = true
+        win()
+    } else if (randomNum === 5 && markedE === false) {
+        squareE.textContent = playerTwo.value
+        squareE.value = playerTwo.value
+        markedE = true
+        win()
+    } else if (randomNum === 6 && markedF === false) {
+        squareF.textContent = playerTwo.value
+        squareF.value = playerTwo.value
+        markedF = true
+        win()
+    } else if (randomNum === 7 && markedG === false) {
+        squareG.textContent = playerTwo.value
+        squareG.value = playerTwo.value
+        markedG = true
+        win()
+    } else if (randomNum === 8 && markedH === false) {
+        squareH.textContent = playerTwo.value
+        squareH.value = playerTwo.value
+        markedH = true
+        win()
+    } else if (randomNum === 9 && markedI === false) {
+        squareI.textContent = playerTwo.value
+        squareI.value = playerTwo.value
+        markedI = true
+        win()
+    }     
+}       
+
+function playerBot() {
+    if (gameStart === false) {
+        return error
+    } else if (gameStart === true) {
+        setTimeout(function botTurn() {
+            displayBrd.textContent = "Player1 Turn"
+            yourTurn = true
+            randomSquare()
+        }, 1000);   
+    }
+}
+
+function win() {
+    if (squareA.value === playerOne.value && squareB.value === playerOne.value && squareC.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareD.value === playerOne.value && squareE.value === playerOne.value && squareF.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareG.value === playerOne.value && squareH.value === playerOne.value && squareI.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareA.value === playerOne.value && squareD.value === playerOne.value && squareG.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareB.value === playerOne.value && squareE.value === playerOne.value && squareH.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareC.value === playerOne.value && squareF.value === playerOne.value && squareI.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareA.value === playerOne.value && squareE.value === playerOne.value && squareI.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareG.value === playerOne.value && squareE.value === playerOne.value && squareC.value === playerOne.value) {
+        gameStart = false
+        displayBrd.textContent = "Player1 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareA.value === playerTwo.value && squareB.value === playerTwo.value && squareC.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareD.value === playerTwo.value && squareE.value === playerTwo.value && squareF.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareG.value === playerTwo.value && squareH.value === playerTwo.value && squareI.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareA.value === playerTwo.value && squareD.value === playerTwo.value && squareG.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareB.value === playerTwo.value && squareE.value === playerTwo.value && squareH.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareC.value === playerTwo.value && squareF.value === playerTwo.value && squareI.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareA.value === playerTwo.value && squareE.value === playerTwo.value && squareI.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    } else if (squareG.value === playerTwo.value && squareE.value === playerTwo.value && squareC.value === playerTwo.value) {
+        gameStart = false
+        displayBrd.textContent = "Player2 Won!"
+        newTTTGame.style.visibility = "visible"
+    }
+}
+
+newTTTGame.addEventListener("click", function() {
+    newTTTGame.style.visibility = "hidden"
+    displayBrd.textContent = ""
+    playerOne.value = ""
+    playerOne.textContent = "Player1:"
+    playerTwo.value = ""
+    playerTwo.textContent = "Player2:"
+    markSelect = false
+    yourTurn = true
+    gameStart = false
+    markedA =  false
+    markedB =  false
+    markedC =  false
+    markedD =  false
+    markedE =  false
+    markedF =  false
+    markedG =  false
+    markedH =  false
+    markedI =  false
+    squareA.textContent = ""
+    squareA.value = null
+    squareB.textContent = ""
+    squareB.value = ""
+    squareC.textContent = ""
+    squareC.value = ""
+    squareD.textContent = ""
+    squareD.value = ""
+    squareE.textContent = ""
+    squareE.value = ""
+    squareF.textContent = ""
+    squareF.value = ""
+    squareG.textContent = ""
+    squareG.value = ""
+    squareH.textContent = ""
+    squareH.value = ""
+    squareI.textContent = ""
+    squareI.value = ""
+    show()
+})
