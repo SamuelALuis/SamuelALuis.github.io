@@ -88,17 +88,20 @@ const endsaleBtn = document.getElementById("endsale-btn")
 let bag = document.getElementById("bag")
 let change = document.getElementById("change")
 
-for (i = 0; i < items.A.length; i++) {
-    drinksSection.innerHTML += `
-    <p>${combos1[i]}</p>
-    <p class="item">${items.A[i]}<p>`
+function itemCall() {
+    for (let i = 0; i < items.A.length; i++) {
+        drinksSection.innerHTML += `
+        <p>${combos1[i]}</p>
+        <p class="item">${items.A[i]}<p>`
+    }
+    for (let i = 0; i < items.B.length; i++) {
+        chipsSection.innerHTML += `
+        <p>${combos2[i]}</p> 
+        <p class="item">${items.B[i]}<p>`
+    }
 }
 
-for (i = 0; i < items.B.length; i++) {
-    chipsSection.innerHTML += `
-    <p>${combos2[i]}</p> 
-    <p class="item">${items.B[i]}<p>`
-}
+itemCall()
 
 totalCash.value = 0
 cashEnt.addEventListener("click", function() {
@@ -315,8 +318,7 @@ markO.addEventListener("click", function() {
                         markSelect = true
                             gameStart = true
                                 displayBrd.textContent = "Player1 goes First"
-                                    hide()
-                                    
+                                    hide()                               
     }
 })
 
@@ -333,8 +335,7 @@ squareA.addEventListener("click", function() {
                 yourTurn = false
                     markedA = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                       
     }
 })
 
@@ -350,8 +351,7 @@ squareB.addEventListener("click", function() {
                 yourTurn = false
                     markedB = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                       
     }
 })
 
@@ -367,8 +367,7 @@ squareC.addEventListener("click", function() {
                 yourTurn = false
                     markedC = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                      
     }
 })
 //row 2
@@ -384,8 +383,7 @@ squareD.addEventListener("click", function() {
                 yourTurn = false
                     markedD = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                   
     }   
 })
 
@@ -401,8 +399,7 @@ squareE.addEventListener("click", function() {
                 yourTurn = false
                     markedE = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                    
     }
 })
 
@@ -418,8 +415,7 @@ squareF.addEventListener("click", function() {
                 yourTurn = false
                     markedF = true
                     win()
-                        playerBot()
-                             
+                        playerBot()                          
     }
 })
 //row 3
@@ -435,8 +431,7 @@ squareG.addEventListener("click", function() {
                 yourTurn = false
                     markedG = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                       
     }
 })
 
@@ -452,8 +447,7 @@ squareH.addEventListener("click", function() {
                 yourTurn = false
                     markedH = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                      
     }
 })
 
@@ -469,8 +463,7 @@ squareI.addEventListener("click", function() {
                 yourTurn = false
                     markedI = true
                     win()
-                        playerBot()
-                            
+                        playerBot()                       
     }
 })
 
@@ -619,6 +612,14 @@ function win() {
         gameStart = false
         displayBrd.textContent = "Player2 Won!"
         newTTTGame.style.visibility = "visible"
+    } else if (markedA === true && markedB === true &&
+            markedC === true && markedD === true &&
+            markedE === true && markedF === true &&
+            markedG === true && markedH === true &&
+            markedI === true) {
+                gameStart = false
+                displayBrd.textContent = "Tie Game!"
+                newTTTGame.style.visibility = "visible"     
     }
 }
 
@@ -660,4 +661,244 @@ newTTTGame.addEventListener("click", function() {
     squareI.textContent = ""
     squareI.value = ""
     show()
+})
+
+//Practice #5 /////////////////////////////////////////////////////////////////////////////////////////////
+
+let moneyCI = document.getElementById("moneyCounterInput")
+let originalInput = document.getElementById("original-input")
+const converter = document.getElementById("converter")
+let moneyConverter = document.getElementById("moneyConverter")
+const counterEtr = document.getElementById("counter-enter")
+const newCashABtn = document.getElementById("newCashA-btn")
+
+let hundredBill = document.getElementById("hundred-bill")
+let fiftyBill = document.getElementById("fifty-bill")
+let twentyBill = document.getElementById("twenty-bill")
+let tenBill = document.getElementById("ten-bill")
+let fiveBill = document.getElementById("five-bill")
+let oneBill = document.getElementById("one-bill")
+let fiftyCent = document.getElementById("fifty-cent")
+let twentyFiveCent = document.getElementById("twentyFive-cent") 
+let tenCent = document.getElementById("ten-cent")
+let fiveCent = document.getElementById("five-cent")
+let oneCent = document.getElementById("one-cent")
+                    
+hundredBill.value = +0
+fiftyBill.value = +0
+twentyBill.value = +0
+tenBill.value = +0
+fiveBill.value = +0
+oneBill.value = +0
+fiftyCent.value = +0
+twentyFiveCent.value = +0
+tenCent.value = +0
+fiveCent.value = +0
+oneCent.value = +0
+
+function originalInputValue() {
+    originalInput.value = moneyCI.value
+    originalInput.textContent = originalInput.value
+}
+
+function inputIdentifier() {
+    if (moneyCI.value.length === 1) {
+        moneyConverter.value = ".0" + moneyCI.value
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 2) {
+        moneyConverter.value = "." + moneyCI.value
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 3) {
+        moneyConverter.value = moneyCI.value[0] + "." + moneyCI.value[1] + moneyCI.value[2]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 4) {
+        moneyConverter.value = moneyCI.value[0] + moneyCI.value[1] + "." + moneyCI.value[2] + moneyCI.value[3]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 5) {
+        moneyConverter.value = moneyCI.value[0] + moneyCI.value[1] + moneyCI.value[2] + "." + moneyCI.value[3] + moneyCI.value[4]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 6) {
+        moneyConverter.value = moneyCI.value[0] + "," + moneyCI.value[1] + moneyCI.value[2] + moneyCI.value[3] + "." + moneyCI.value[4] + moneyCI.value[5]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 7) {
+        moneyConverter.value = moneyCI.value[0] + moneyCI.value[1] + "," + moneyCI.value[2] + moneyCI.value[3] + moneyCI.value[4] + "." + moneyCI.value[5] + moneyCI.value[6]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 8) {
+        moneyConverter.value = moneyCI.value[0] + moneyCI.value[1] + moneyCI.value[2] + "," + moneyCI.value[3] + moneyCI.value[4] + moneyCI.value[5] + "." + moneyCI.value[6] + moneyCI.value[7]
+        moneyConverter.textContent = moneyConverter.value
+    } else if (moneyCI.value.length === 9) {
+        moneyConverter.value = moneyCI.value[0] + "," + moneyCI.value[1] + moneyCI.value[2] + moneyCI.value[3] + "," + moneyCI.value[4] + moneyCI.value[5] + moneyCI.value[6] + "." + moneyCI.value[7] + moneyCI.value[8]
+        moneyConverter.textContent = moneyConverter.value
+    }
+}  
+
+converter.addEventListener("click", function() {
+   inputIdentifier() 
+   originalInputValue()
+   if (moneyCI.value.length === 1) {
+    newCashABtn.style.visibility = "visible"
+   } else {
+        return error
+   }
+})
+
+function moneyIdentifier() {
+    if (originalInput.value > 10000) {
+        hundredBill.value += 1 
+        hundredBill.textContent = "$100\: " + hundredBill.value
+        originalInput.value -= 10000
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 5000) {
+        fiftyBill.value += 1 
+        fiftyBill.textContent = "$50\: " + fiftyBill.value
+        originalInput.value -= 5000
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 2000) {
+        twentyBill.value += 1 
+        twentyBill.textContent = "$20\: " + twentyBill.value
+        originalInput.value -= 2000
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 1000) {
+        tenBill.value += 1 
+        tenBill.textContent = "$10\: " + tenBill.value
+        originalInput.value -= 1000
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 500) {
+        fiveBill.value += 1 
+        fiveBill.textContent = "$5\: " + fiveBill.value
+        originalInput.value -= 500
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 100) {
+        oneBill.value += 1 
+        oneBill.textContent = "$1\: " + oneBill.value
+        originalInput.value -= 100
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 50) {
+        fiftyCent.value += 1 
+        fiftyCent.textContent = ".50c\: " + fiftyCent.value
+        originalInput.value -= 50
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 25) {
+        twentyFiveCent.value += 1 
+        twentyFiveCent.textContent = ".25c\: " + twentyFiveCent.value
+        originalInput.value -= 25
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 10) {
+        tenCent.value += 1 
+        tenCent.textContent = ".10c\: " + tenCent.value
+        originalInput.value -= 10
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value > 5) {
+        fiveCent.value += 1 
+        fiveCent.textContent = ".5c\: " + fiveCent.value
+        originalInput.value -= 5
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    } else if (originalInput.value >= 1) {
+        oneCent.value += 1 
+        oneCent.textContent = ".1c\: " + oneCent.value
+        originalInput.value -= 1
+        originalInput.textContent = originalInput.value
+        moneyIdentifier()
+    }
+}
+
+counterEtr.addEventListener("click", function() {
+    moneyIdentifier()
+    if (moneyCI.value.length >= 1) {
+        newCashABtn.style.visibility = "visible"
+        moneyCI.value = ""
+    } else {
+            return error
+    }
+    
+})
+
+newCashABtn.addEventListener("click", function() {
+    hundredBill.value = +0
+    fiftyBill.value = +0
+    twentyBill.value = +0
+    tenBill.value = +0
+    fiveBill.value = +0
+    oneBill.value = +0
+    fiftyCent.value = +0
+    twentyFiveCent.value = +0
+    tenCent.value = +0
+    fiveCent.value = +0
+    oneCent.value = +0
+    hundredBill.textContent = "$100:"
+    fiftyBill.textContent = "$50:"
+    twentyBill.textContent = "$20:"
+    tenBill.textContent = "$10:"
+    fiveBill.textContent = "$5:"
+    oneBill.textContent = "$1:"
+    fiftyCent.textContent = ".50c:"
+    twentyFiveCent.textContent = ".25c:"
+    tenCent.textContent = ".10c:"
+    fiveCent.textContent = ".5c:"
+    oneCent.textContent = ".1c:"
+})
+
+//Practice #6////////////////////////////////////////////////////////////////////////////////////////////////
+
+let p6Input = document.getElementById("p6-input")
+const p6Btn = document.getElementById("p6-btn")
+let p6Output = document.getElementById("p6-output")
+
+p6Btn.addEventListener("click", function() {
+    
+})
+
+//Practice #7///////////////////////////////////////////////////////////////////////////////////////////////
+
+const p7LeftRightBtn = document.getElementById("p7leftRight-btn")
+const p7CenterBtn = document.getElementById("p7center-btn")
+const p7RightLeftBtn = document.getElementById("p7rightLeft-btn")
+
+let firstLayer = document.getElementById("first-layer")
+let secondLayer = document.getElementById("second-layer")
+let thirdLayer = document.getElementById("third-layer")
+let fourthLayer = document.getElementById("fourth-layer")
+let fifthLayer = document.getElementById("fifth-layer")
+
+let left = false
+let center = false
+let right =  false
+
+p7LeftRightBtn.addEventListener("click", function() {
+        firstLayer.style.paddingRight = "48px"
+        secondLayer.style.paddingRight = "36px"
+        thirdLayer.style.paddingRight = "24px"
+        fourthLayer.style.paddingRight = "12px"
+        firstLayer.style.paddingLeft = "0px"
+        secondLayer.style.paddingLeft = "0px"
+        thirdLayer.style.paddingLeft = "0px"
+        fourthLayer.style.paddingLeft = "0px"
+})
+
+p7CenterBtn.addEventListener("click", function() {
+        firstLayer.style.padding = "0px"
+        secondLayer.style.padding = "0px"
+        thirdLayer.style.padding = "0px"
+        fourthLayer.style.padding = "0px"
+})
+
+p7RightLeftBtn.addEventListener("click", function() {
+        firstLayer.style.paddingLeft = "48px"
+        secondLayer.style.paddingLeft = "36px"
+        thirdLayer.style.paddingLeft = "24px"
+        fourthLayer.style.paddingLeft = "12px"
+        firstLayer.style.paddingRight = "0px"
+        secondLayer.style.paddingRight = "0px"
+        thirdLayer.style.paddingRight = "0px"
+        fourthLayer.style.paddingRight = "0px"
 })

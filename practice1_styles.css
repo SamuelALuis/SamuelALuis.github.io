@@ -313,3 +313,78 @@ button {
     background: blueviolet;
     visibility: hidden;
 }
+
+/*Practice #5*/
+
+#practice5 {
+    border: solid;
+    width: 600px;
+    display: inline-block;
+}
+
+#moneyCounterInput {
+    margin: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+}
+
+#newCashA-btn {
+    visibility: hidden;
+}
+
+#money-section {
+    display: inline-flex;
+}
+
+#dollar-section {
+    width: 100px;
+    margin-right: 70px;
+}
+
+#dollar-section p {
+    text-align: start;
+    font-weight: bold;
+    font-size: large;
+}
+
+#cents-section {
+    width: 100px;
+    margin-left: 70px;
+    
+}
+
+#cents-section p {
+    text-align: start;
+    font-weight: bold;
+    font-size: large;
+}
+
+/*Practice #6*/
+
+#practice6 {
+    border: solid;
+    width: 300px;
+    display: inline-block;
+}
+
+#p6-input {
+    margin: 10px;
+}
+
+/*Practice #7*/
+
+#practice7 {
+    border: solid;
+    width: 500px;
+    display: inline-block;
+}
+
+#triangle {
+    width: 100px;
+    display: inline-grid;
+}
+
+#triangle p {
+    margin: 0px;
+}
